@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+:root{
+    --border-primary: #1f851b;
+    --border-secondary: #2880bb;
+    --left-bg: rgba(255, 208, 164, 0.411);
+    --right-bg: rgba(43, 43, 43, .8);
+    --text: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Baloo 2', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.split{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.split.left{
+    background: url(assets/photo-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 0;
+}
+
+.split.left::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--left-bg);
+}
+
+.split.right{
+    background: url(assets/photo-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+}
+
+.split.right::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--right-bg);
+}
+
+.hover__left .left{
+    width: 75%;
+}
+
+.hover__left .right{
+    width: 25%;
+}
+
+.hover__right .right{
+    width: 75%;
+}
+
+.hover__right .left{
+    width: 25%;
+}
+
+.split.left,
+.split.left::before,
+.split.right,
+.split.right::before{
+    transition: all 1s ease-in-out;
+}
+
+@media (width > 768px) {
+    h1{
+        left: 40%;
+        font-size: 3rem;
+    }
+}
