@@ -17,7 +17,7 @@ This project features an interactive split-screen layout where hovering over eit
 
 ## 🖼️ Demo
 
-🔗 [Live Demo]()  
+🔗 [Live Demo](https://zahra-babamohammadi.github.io/split-screen-hover-effect/)  
 
 ---
 
